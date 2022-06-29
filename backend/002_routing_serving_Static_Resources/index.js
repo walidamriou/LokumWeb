@@ -1,5 +1,5 @@
 const http = require('http')
-const fs = require(fs)
+const fs = require('fs')
 const port = process.env.PORT || 3000
 
 function ServeStaticHTMLFile(res, path,contentType,responseCode = 200){
@@ -18,20 +18,16 @@ const server = http.createServer((req,res)=>{
     const path = req.url.replace(/\/?(?:\?.*)?$/,'').toLocaleLowerCase()
     switch(path){
         case '':
-            ServeStaticHTMLFile(res,)
-           res.end('Home page')
+           ServeStaticHTMLFile(res,'/static/home.html','text/html')
            break
         case '/page1':
-            res.writeHead(200,{'Content-Type':'text/plain'})
-            res.end('first page')
+            ServeStaticHTMLFile(res,'/static/page1.html','text/html')
             break
         case '/page2':
-            res.writeHead(200,{'Content-Type':'text/plain'})
-            res.end('second page')
+            ServeStaticHTMLFile(res,'/static/page2.html','text/html')
             break
         default:
-            res.writeHead(404,{'Content-Type':'text/plain'})
-            res.end(' Page Not Found 404')
+            ServeStaticHTMLFile(res,'/static/error.html','text/html')
             break
     }
 })
