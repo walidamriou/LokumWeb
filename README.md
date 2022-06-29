@@ -10,7 +10,7 @@ To Learn programming Web development with small programs examples
 - 003 Express simple :heavy_check_mark:
 - 004 Express routes :heavy_check_mark:
 - 005 Express Routing Serving Static Resources (Serve HTML) :heavy_check_mark:
-
+- 005 Express Dynamic Content in Views
 * __frontend__  
 
 ### Copyright CC 2022 Walid Amriou
