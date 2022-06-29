@@ -22,6 +22,21 @@ app.get('/page2',(req,res)=>{
     res.send('page 2')
 })
 
+app.get('/page3',(req,res)=>{
+    res.type('text/plain')
+    res.send('page 3')
+})
+
+app.get('/page3/subpage1',(req,res)=>{
+    res.type('text/plain')
+    res.send('sub 1 of page 3')
+})
+
+app.get('/page3/subpage2',(req,res)=>{
+    res.type('text/plain')
+    res.send('sub 1 of page 3')
+})
+
 app.use((req,res)=>{
     res.type("text/plain")
     res.status(404)
