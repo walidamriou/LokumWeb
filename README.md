@@ -9,6 +9,7 @@ To Learn programming Web development with small programs examples
 - 002 Routing Serving Static Resources (Serve HTML) :heavy_check_mark:
 - 003 Express simple :heavy_check_mark:
 - 004 Express routes :heavy_check_mark:
+- 005 Express Routing Serving Static Resources (Serve HTML) :heavy_check_mark:
 
 * __frontend__  
 
