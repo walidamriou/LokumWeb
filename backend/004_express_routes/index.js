@@ -37,6 +37,17 @@ app.get('/page3/subpage2',(req,res)=>{
     res.send('sub 1 of page 3')
 })
 
+app.get('/page4*',(req,res)=>{
+    res.type('text/plain')
+    res.send('page 4')
+})
+
+// This is not working because the first handler uses a wildcard in its path: /page4*
+app.get('/page4/subpage1',(req,res)=>{
+    res.type('text/plain')
+    res.send('sub 1 of page 4')
+})
+
 app.use((req,res)=>{
     res.type("text/plain")
     res.status(404)
