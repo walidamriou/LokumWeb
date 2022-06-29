@@ -14,10 +14,11 @@ function ServeStaticHTMLFile(res, path,contentType,responseCode = 200){
 }
 
 const server = http.createServer((req,res)=>{
+    // normalize url by removing querystring, optional trailing slash, and making lowercase
     const path = req.url.replace(/\/?(?:\?.*)?$/,'').toLocaleLowerCase()
     switch(path){
         case '':
-           res.writeHead(200,{'Content-Type':'text/plain'})
+            ServeStaticHTMLFile(res,)
            res.end('Home page')
            break
         case '/page1':
